@@ -17,22 +17,31 @@ function Rating({ onSetRating }) {
           <RatingNumber
             key={i}
             number={i + 1}
+            userRating={userRating}
             onSetRating={() => setUserRating(i + 1)}
           />
         ))}
       </div>
       <Button variant='filled' onClick={handleUserRating}>
-        Submit
+        {userRating ? 'Submit' : 'Enter rating'}
       </Button>
     </>
   );
 }
 
-function RatingNumber({ number, onSetRating }) {
+function RatingNumber({ number, userRating, onSetRating }) {
+  const isSelected = userRating === number;
+
+  function handleSelected() {
+    onSetRating();
+  }
+
   return (
     <span
-      className='my-6 bg-grey/10 text-white font-medium rounded-full aspect-square flex justify-center items-center hover:text-blue hover:bg-white transition-all hover:cursor-pointer'
-      onClick={onSetRating}
+      className={`my-6 ${
+        isSelected ? 'text-blue bg-white' : 'bg-grey/10 text-white'
+      } font-medium rounded-full aspect-square flex justify-center items-center hover:text-blue hover:bg-orange transition-all hover:cursor-pointer`}
+      onClick={handleSelected}
     >
       {number}
     </span>
