@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import Rating from './Rating';
-import Button from './Button';
 
 import StarIcon from '/icon-star.svg';
 
-function Survey() {
+function Survey({ onSetRating }) {
   return (
     <div className='flex flex-col justify-center'>
       <img
@@ -16,8 +16,7 @@ function Survey() {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <Rating />
-      <Button variant='filled'>Submit</Button>
+      <Rating onSetRating={onSetRating} />
     </div>
   );
 }

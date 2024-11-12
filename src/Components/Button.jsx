@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
-function Button({ children, variant }) {
+function Button({ children, variant, onClick }) {
   const { button } = customTheme;
 
-  return <button className={button[variant]}>{children}</button>;
+  return (
+    <button className={button[variant]} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
 
 const customTheme = {
