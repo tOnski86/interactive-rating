@@ -1,9 +1,10 @@
-/* eslint-disable react/prop-types */
-function Success({ children }) {
+import Button from './Button';
+
+function Success() {
   return (
     <div>
       <h2>Success!</h2>
-      {children}
+      <Button>Back</Button>
     </div>
   );
 }

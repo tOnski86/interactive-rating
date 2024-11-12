@@ -1,18 +1,11 @@
-import Rate from './Rate';
-import Rating from './Components/Rating';
-import Button from './Components/Button';
-import Success from './Success';
+import Survey from './Components/Survey';
+import Success from './Components/Success';
 
 function App() {
   return (
     <div>
-      <Rate>
-        <Rating />
-        <Button>Submit</Button>
-      </Rate>
-      <Success>
-        <Button>Back</Button>
-      </Success>
+      <Survey />
+      <Success />
     </div>
   );
 }

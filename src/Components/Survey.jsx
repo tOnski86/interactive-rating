@@ -1,5 +1,7 @@
-/* eslint-disable react/prop-types */
-function Rate({ children }) {
+import Rating from './Rating';
+import Button from './Button';
+
+function Survey() {
   return (
     <div>
       <h2>How did we do?</h2>
@@ -7,9 +9,10 @@ function Rate({ children }) {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      {children}
+      <Rating />
+      <Button>Submit</Button>
     </div>
   );
 }
 
-export default Rate;
+export default Survey;
