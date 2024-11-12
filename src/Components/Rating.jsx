@@ -12,7 +12,6 @@ function Rating({ onSetRating }) {
   return (
     <>
       <div className='grid grid-cols-5 text-center gap-4'>
-        {/* Generate numbers 1-5 from array */}
         {Array.from({ length: 5 }, (_, i) => (
           <RatingNumber
             key={i}

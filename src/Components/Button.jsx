@@ -12,8 +12,8 @@ function Button({ children, variant, onClick }) {
 const customTheme = {
   button: {
     filled:
-      'bg-orange text-blue uppercase font-bold p-3 rounded-full tracking-widest hover:bg-white transition-colors',
-    text: 'text-orange/80 hover:text-orange transition-colors uppercase tracking-widest text-xs',
+      "bg-orange text-blue uppercase font-bold p-3 rounded-full tracking-widest hover:bg-white transition-colors",
+    text: "text-orange/80 hover:text-orange transition-colors uppercase tracking-widest text-xs",
   },
 };
 
